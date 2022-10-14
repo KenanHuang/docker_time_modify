@@ -101,7 +101,9 @@ Fri Oct 14 22:41:44 CST 2022
 #### Parameters you need to know in advance
 
 The multipliers "m", "h", "d" and "y" can be used to specify the offset in
-  minutes, hours, days and years (365 days each), respectively. -- as described in [wolfcw/libfaketime]([GitHub - wolfcw/libfaketime: libfaketime modifies the system time for a single application](https://github.com/wolfcw/libfaketime))
+  minutes, hours, days and years (365 days each), respectively. -- as described in [wolfcw/libfaketime](https://github.com/wolfcw/libfaketime)
+
+/etc/faketimerc  is used to store the offset of fake time.So you just need to change it to get different time.
 
 #### demo:
 
