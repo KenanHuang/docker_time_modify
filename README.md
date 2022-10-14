@@ -31,6 +31,8 @@ Fri Oct 14 08:49:33 UTC 2022 #the time change back automatically after few secon
 [root@b1ad49dbdbbb /]# 
 ```
 
+So I think being able to freely modify the time in the container would help a lot of people.This would be great for simulating scenarios at specific times.If you think this project would help you, please give a  star ⭐️ ! Thanks a lot ! ^_^
+
 # Method
 
 Thanks to [wolfcw/libfaketime](https://github.com/wolfcw/libfaketime) .This is a feasible approach to generate a fake time.The solution is to generate a fake time and intercepts all system call programs use to retrieve the time and date(detailed in [libfaketime/README at master · wolfcw/libfaketime (github.com)](https://github.com/wolfcw/libfaketime/blob/master/README)).
