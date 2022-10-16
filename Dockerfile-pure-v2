@@ -1,0 +1,19 @@
+FROM centos:centos7
+
+COPY ./libs/libfaketime /home/libfaketime
+
+RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo && \
+    yum -y install gcc gcc-c++ make autoconf && \
+
+    cd /home/libfaketime && make FAKETIME_COMPILE_CFLAGS="-DFAKE_SETTIME" && make install && \
+    echo "+0" > /etc/myfaketime.rc && \
+
+    yum -y remove gcc gcc-c++ make autoconf && \
+
+    yum clean all && \
+    rm -rf /var/cache/yum/* /home/libfaketime
+
+ENV LD_PRELOAD=/usr/local/lib/faketime/libfaketime.so.1
+ENV FAKETIME_TIMESTAMP_FILE=/etc/myfaketime.rc
+ENV FAKETIME_UPDATE_TIMESTAMP_FILE=1
+ENV FAKETIME_NO_CACHE=1
