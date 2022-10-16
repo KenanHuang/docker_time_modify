@@ -97,7 +97,7 @@ docker build -t centos7_faketime:2.0 -f ./Dockerfile-pure-v2 .
 Step5:run container
 
 ```bash
-docker run -it --rm centos7_faketime:1.0 /bin/bash
+docker run -it --rm centos7_faketime:2.0 /bin/bash
 ```
 
 Step6:do whatever you want
