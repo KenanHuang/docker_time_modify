@@ -31,7 +31,7 @@ Fri Oct 14 08:49:33 UTC 2022 #the time change back automatically after few secon
 [root@b1ad49dbdbbb /]# 
 ```
 
-So I think being able to freely modify the time in the container would help a lot of people.This would be great for simulating scenarios at specific times.
+So I think being able to freely modify the time in the container would help someone.This would be great for simulating scenarios at specific times.
 
 # Method
 
@@ -77,14 +77,12 @@ Step1:Clone
 git clone git@github.com:KenanHuang/docker_time_modify.git
 ```
 
-Step2:download the jdk and clone the libfaketime 
+Step2:download libfaketime 
 
-Step3:put jdk and libfaketime into libs.the contents in libs as following:
+Step3:put libfaketime into libs.the contents in libs as following:
 
 ```bash
 (base) ➜  docker_time_modify git:(main) ls -l libs
-total 289808
--rw-r--r--@  1 conan  staff  148003421 Oct 14 12:02 jdk-8u333-linux-x64.tar.gz
 drwxr-xr-x  17 conan  staff        544 Oct 12 15:43 libfaketime
 ```
 
